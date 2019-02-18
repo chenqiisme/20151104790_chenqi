@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   <constant name="struts.ui.theme" value="simple" />
+   <constant name="struts.objectFactory" value="spring" />
+   <constant name="struts.devMode" value="true"></constant>
+   <constant name="struts.multipart.maxSize" value="900000000"></constant>
+   <package name="default" extends="struts-default">
+   		<action name="Index" class="com.ideabobo.action.IndexAction" method="index">
+   			<result name="login">/web/pages/Index/login.jsp</result>
+        	<result name="index">/web/pages/Index/index.jsp</result>
+   		</action>
+   		<action name="User" class="com.ideabobo.action.UserAction">
+   			<result name="success">/web/pages/User/user.jsp</result>
+   			<result name="login">/web/pages/Index/login.jsp</result>
+        	<result name="index">/web/pages/Index/index.jsp</result>
+   		</action>
+   		<action name="Posts" class="com.ideabobo.action.PostsAction">
+   			<result name="success">/web/pages/Posts/posts.jsp</result>
+   		</action>
+   		<action name="Notice" class="com.ideabobo.action.NoticeAction">
+   			<result name="success">/web/pages/Notice/notice.jsp</result>
+   		</action>
+   		<action name="Replay" class="com.ideabobo.action.ReplayAction">
+   			<result name="success">/web/pages/Replay/replay.jsp</result>
+   		</action>
+		<action name="Park" class="com.ideabobo.action.ParkAction">
+   			<result name="success">/web/pages/Park/park.jsp</result>
+            <result name="parkshop">/web/pages/Park/parkshop.jsp</result>
+   			<result name="type">/web/pages/Park/type.jsp</result>
+   		</action>
+   		
+   		<action name="Client" class="com.ideabobo.action.ClientAction">
+   			<result name="success">/web/pages/Wehall/wehall.jsp</result>
+   		</action>
+   		<action name="Message" class="com.ideabobo.action.MessageAction">
+   			<result name="success">/web/pages/Message/message.jsp</result>
+   		</action>
+   		<action name="Chewei" class="com.ideabobo.action.CheweiAction">
+   			<result name="success">/web/pages/Car/car.jsp</result>
+   		</action>
+		<action name="Dingzuo" class="com.ideabobo.action.DingzuoAction">
+   			<result name="success">/web/pages/Dingzuo/dingzuo.jsp</result>
+   		</action>
+         <action name="Upload" class="com.ideabobo.util.UploadAction" method="upload">
+   			
+         </action>		
+   </package>
+</struts>
